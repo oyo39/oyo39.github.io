@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Giới thiệu — Tên của bạn</title>
+  <style>
+    :root{--bg:#f7f8fb;--card:#fff;--muted:#6b7280;--accent:#0ea5a4}
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial,sans-serif;
+      margin:0;background:var(--bg);color:#111}
+    .container{max-width:900px;margin:48px auto;padding:24px}
+    .card{background:var(--card);border-radius:12px;padding:28px;box-shadow:0 6px 18px rgba(15,23,42,0.06)}
+    .header{display:flex;gap:20px;align-items:center}
+    .avatar{width:96px;height:96px;border-radius:12px;object-fit:cover;background:#e6eef0}
+    h1{margin:0;font-size:1.6rem}
+    p.lead{color:var(--muted);margin:8px 0 18px}
+    .meta{display:flex;gap:12px;flex-wrap:wrap;margin-top:14px}
+    .meta a{color:var(--accent);text-decoration:none;font-weight:600}
+    .section{margin-top:20px}
+    .skills{display:flex;gap:8px;flex-wrap:wrap}
+    .skill{background:#eef7f6;color:#065f5b;padding:6px 10px;border-radius:999px;font-size:0.9rem}
+    footer{margin-top:28px;color:var(--muted);font-size:0.9rem}
+  </style>
+</head>
+<body>
+  <main class="container">
+    <article class="card" aria-labelledby="page-title">
+      <header class="header">
+        <img class="avatar" src="https://via.placeholder.com/200" alt="Ảnh hồ sơ của Bạn">
+        <div>
+          <h1 id="page-title">Tên của Bạn</h1>
+          <p class="lead">Nhà phát triển web • Thiết kế UX • Người thích giải quyết vấn đề</p>
+          <div class="meta">
+            <span><strong>Địa điểm:</strong> Hà Nội, ViệtNam</span>
+            <span><strong>Email:</strong> <a href="mailto:you@example.com">you@example.com</a></span>
+            <span><a href="https://github.com/yourusername" target="_blank" rel="noopener">GitHub</a></span>
+            <span><a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener">LinkedIn</a></span>
+          </div>
+        </div>
+      </header>
+
+      <section class="section" aria-labelledby="about-heading">
+        <h2 id="about-heading">Về tôi</h2>
+        <p>Tôi là nhà phát triển web với hơn 5 năm kinh nghiệm xây dựng ứng dụng front-end và back-end. Tôi tập trung vào hiệu suất, trải nghiệm người dùng và mã dễ bảo trì. Tôi thích học công nghệ mới và cộng tác trong các dự án mở.</p>
+      </section>
+
+      <section class="section" aria-labelledby="skills-heading">
+        <h2 id="skills-heading">Kỹ năng</h2>
+        <div class="skills">
+          <span class="skill">HTML</span>
+          <span class="skill">CSS</span>
+          <span class="skill">JavaScript</span>
+          <span class="skill">React</span>
+          <span class="skill">Node.js</span>
+          <span class="skill">TypeScript</span>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="projects-heading">
+        <h2 id="projects-heading">Một vài dự án</h2>
+        <ul>
+          <li><strong>Project A:</strong> Ứng dụng quản lý công việc — React, Node.js, PostgreSQL</li>
+          <li><strong>Project B:</strong> Trang thương mại điện tử nhỏ — Next.js, Stripe</li>
+          <li><strong>Project C:</strong> Thư viện UI nội bộ — TypeScript, Storybook</li>
+        </ul>
+      </section>
+
+      <section class="section" aria-labelledby="contact-heading">
+        <h2 id="contact-heading">Liên hệ</h2>
+        <p>Nếu bạn muốn hợp tác hoặc hỏi về dự án, gửi email cho tôi tại <a href="mailto:you@example.com">you@example.com</a> hoặc kết nối qua LinkedIn.</p>
+      </section>
+
+      <footer>
+        <p>© <span id="year"></span> Tên của Bạn — Thiết kế tối giản</p>
+      </footer>
+    </article>
+  </main>
+
+  <script>
+    // Tự động chèn năm hiện tại
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
