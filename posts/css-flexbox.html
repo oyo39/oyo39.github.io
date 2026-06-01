@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>CSS Flexbox từ Zero đến Pro — Tài liệu &amp; Ví dụ | Coder-like</title>
+  <meta name="description" content="Hướng dẫn CSS Flexbox: nguyên lý, thuộc tính chính, layout patterns và ví dụ thực tế. Tải PDF/ZIP tài liệu." />
+  <link rel="icon" href="../assets/images/favicon.png" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-tomorrow.min.css" />
+  <style>
+    .post-hero{background:#0f172a;color:#fff;padding:28px;border-radius:12px;margin-bottom:18px}
+    .post-hero h1{margin:0 0 8px 0;font-size:32px}
+    .post-meta{color:rgba(255,255,255,0.85);margin-top:6px}
+    .lead{font-size:18px;color:var(--muted);margin-top:8px}
+    .toc{background:#fff;padding:14px;border-radius:10px;margin-bottom:18px}
+    .post-content{background:var(--card);padding:20px;border-radius:12px;box-shadow:0 1px 0 rgba(16,24,40,0.03)}
+    .download-box{display:flex;gap:12px;align-items:center;background:#fff;padding:14px;border-radius:10px;margin:18px 0;box-shadow:0 1px 0 rgba(16,24,40,0.03)}
+    .download-btn{background:var(--accent);color:#fff;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:700}
+    .secondary-btn{background:#eef2ff;color:var(--accent);padding:8px 12px;border-radius:8px;text-decoration:none;font-weight:600}
+    pre{overflow:auto;border-radius:8px}
+    .demo{background:#fff;padding:12px;border-radius:8px;margin:12px 0;display:flex;gap:12px;flex-wrap:wrap}
+    .demo .box{width:100px;height:80px;background:linear-gradient(135deg,#7dd3fc,#60a5fa);display:flex;align-items:center;justify-content:center;color:#04263b;font-weight:700;border-radius:6px}
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="../index.html">
+        <img src="../assets/images/logo.svg" alt="Logo" height="36" />
+        <span class="site-title">Coder-like</span>
+      </a>
+      <nav class="main-nav">
+        <a href="../index.html">Trang chủ</a>
+        <a href="../search.html">Tìm kiếm</a>
+        <a href="../categories.html">Danh mục</a>
+        <a href="../about.html">Giới thiệu</a>
+      </nav>
+      <div class="header-actions">
+        <a class="btn btn-primary" href="../search.html">Tìm kiếm</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container site-main" style="padding-top:28px">
+    <article class="post-hero">
+      <h1>CSS Flexbox từ Zero đến Pro</h1>
+      <p class="post-meta">12 Tháng 4, 2026 · 10 phút đọc · Tags: <a href="../categories/css.html" style="color:#7dd3fc">CSS</a>, <a href="../categories/layout.html" style="color:#7dd3fc">Layout</a></p>
+      <p class="lead">Bài viết tổng hợp các khái niệm cốt lõi về CSS Flexbox, các thuộc tính chính, pattern layout phổ biến và ví dụ minh họa để bạn áp dụng nhanh trong dự án thực tế.</p>
+    </article>
+
+    <div class="toc">
+      <strong>Mục lục</strong>
+      <ol>
+        <li><a href="#intro">Giới thiệu Flexbox</a></li>
+        <li><a href="#container">Thuộc tính của flex container</a></li>
+        <li><a href="#items">Thuộc tính của flex items</a></li>
+        <li><a href="#patterns">Layout patterns</a></li>
+        <li><a href="#examples">Ví dụ hoàn chỉnh</a></li>
+        <li><a href="#download">Tải tài liệu</a></li>
+      </ol>
+    </div>
+
+    <div class="post-content">
+      <h2 id="intro">1. Giới thiệu Flexbox</h2>
+      <p>Flexbox (Flexible Box) là module layout trong CSS giúp sắp xếp phần tử theo hàng hoặc cột, dễ xử lý alignment và phân phối khoảng trống trong container.</p>
+
+      <h2 id="container">2. Thuộc tính của flex container</h2>
+      <p>Cách biến một phần tử thành flex container:</p>
+      <pre><code class="language-css">.container {
+  display: flex; /* hoặc inline-flex */
+}</code></pre>
+
+      <p>Các thuộc tính quan trọng:</p>
+      <ul>
+        <li><strong>flex-direction:</strong> row | row-reverse | column | column-reverse</li>
+        <li><strong>flex-wrap:</strong> nowrap | wrap | wrap-reverse</li>
+        <li><strong>justify-content:</strong> flex-start | center | space-between | space-around | space-evenly</li>
+        <li><strong>align-items:</strong> stretch | flex-start | center | baseline | flex-end</li>
+        <li><strong>align-content:</strong> khi có nhiều dòng</li>
+      </ul>
+
+      <h2 id="items">3. Thuộc tính của flex items</h2>
+      <p>Các thuộc tính dùng trên phần tử con:</p>
+      <pre><code class="language-css">.item {
+  order: 1;        /* vị trí hiển thị */
+  flex: 1 1 auto;  /* grow | shrink | basis */
+  align-self: center; /* override align-items */
+}</code></pre>
+
+      <h2 id="patterns">4. Layout patterns</h2>
+      <h3>4.1 Trung tâm (center both axes)</h3>
+      <pre><code class="language-css">.center {
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}</code></pre>
+      <div class="demo" aria-hidden="true" style="display:block">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+      </div>
+
+      <h3>4.2 Header + content + sidebar</h3>
+      <pre><code class="language-css">.layout {
+  display:flex;
+  gap:16px;
+}
+.content { flex:1 }
+.sidebar { width:300px; }</code></pre>
+
+      <h3>4.3 Responsive card grid</h3>
+      <pre><code class="language-css">.grid {
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+}
+.grid .card { flex:1 1 220px }</code></pre>
+
+      <h2 id="examples">5. Ví dụ hoàn chỉnh</h2>
+      <p>HTML:</p>
+      <pre><code class="language-html">&lt;div class="center" style="height:200px"&gt;
+  &lt;div class="box"&gt;Nội dung&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+      <p>CSS (gộp):</p>
+      <pre><code class="language-css">.center{display:flex;justify-content:center;align-items:center;height:200px;background:#f8fafc;border-radius:8px}
+.box{padding:12px 18px;background:#60a5fa;color:#04263b;border-radius:6px;font-weight:700}</code></pre>
+
+      <h2 id="download">6. Tải tài liệu</h2>
+      <div class="download-box">
+        <div style="flex:1">
+          <p style="margin:0 0 6px 0;font-weight:700">Tải tài liệu CSS Flexbox</p>
+          <p style="margin:0;color:var(--muted)">PDF hoặc ZIP chứa ví dụ và mã nguồn — ~900 KB</p>
+        </div>
+        <div style="display:flex;gap:8px">
+          <a class="download-btn" href="../downloads/css-flexbox.pdf" download>Download PDF</a>
+          <a class="secondary-btn" href="../downloads/css-flexbox.zip" download>Tải ZIP</a>
+        </div>
+      </div>
+
+      <h2 id="resources">Tài nguyên &amp; tham khảo</h2>
+      <ul>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout" target="_blank" rel="noopener">MDN — Flexbox</a></li>
+        <li><a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" target="_blank" rel="noopener">A Complete Guide to Flexbox — CSS-Tricks</a></li>
+      </ul>
+
+      <p style="color:var(--muted);font-size:14px;margin-top:18px">Bài viết cập nhật: 12 Tháng 4, 2026</p>
+    </div>
+  </main>
+
+  <footer class="site-footer" style="margin-top:28px">
+    <div class="container">
+      <div class="footer-inner">
+        <p>© 2026 Coder-like. Mọi quyền được bảo lưu.</p>
+        <nav class="footer-nav">
+          <a href="../privacy.html">Chính sách</a>
+          <a href="../contact.html">Liên hệ</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-markup.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-css.min.js"></script>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
