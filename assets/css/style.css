@@ -74,7 +74,7 @@ body{
 }
 .post-image {width:auto; display: flex; justify-content: center;}
 .post-image img{height: 600px;}
-.post-thumb img{width:160px;height:100px;object-fit:cover;border-radius:8px;display:block}
+.post-thumb img{width:160px;height:180px;object-fit:cover;border-radius:8px;display:block}
 .post-body{flex:1}
 .post-title{margin:0 0 8px 0;font-size:18px}
 .post-title a{text-decoration:none;color:#0f172a}
