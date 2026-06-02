@@ -18,7 +18,7 @@ body{
   -webkit-font-smoothing:antialiased;
   -moz-osx-font-smoothing:grayscale;
   line-height:1.5;
-  font-size:16px;
+  font-size:21px;
 }
 
 /* Container */
@@ -72,6 +72,8 @@ body{
   margin-bottom:16px;
   align-items:flex-start;
 }
+.post-image {width:auto; display: flex; justify-content: center;}
+.post-image img{height: 600px;}
 .post-thumb img{width:160px;height:100px;object-fit:cover;border-radius:8px;display:block}
 .post-body{flex:1}
 .post-title{margin:0 0 8px 0;font-size:18px}
