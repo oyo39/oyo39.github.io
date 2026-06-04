@@ -3,12 +3,14 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Giới thiệu — Tên của bạn</title>
+  <title>Giới thiệu — TamAnClub</title>
+  <link rel="icon" href="assets/images/favicon.png" />
+  <link rel="stylesheet" href="assets/css/style.css" />
   <style>
     :root{--bg:#f7f8fb;--card:#fff;--muted:#6b7280;--accent:#0ea5a4}
     body{font-family:system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial,sans-serif;
       margin:0;background:var(--bg);color:#111}
-    .container{max-width:900px;margin:48px auto;padding:24px}
+    .container-about{max-width:900px;margin:0px auto;padding:28px}
     .card{background:var(--card);border-radius:12px;padding:28px;box-shadow:0 6px 18px rgba(15,23,42,0.06)}
     .header{display:flex;gap:20px;align-items:center}
     .avatar{width:96px;height:96px;border-radius:12px;object-fit:cover;background:#e6eef0}
@@ -23,55 +25,71 @@
   </style>
 </head>
 <body>
-  <main class="container">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html">
+        <img src="assets/images/TamAnClub_logo.png" alt="TamAnClub Logo" height="120" />
+        <span class="site-title">TamAnClub</span>
+      </a>
+      <nav class="main-nav">
+        <a href="index.html">Trang chủ</a>
+        <a href="categories.html">Danh mục</a>
+        <a href="about.html">Giới thiệu</a>
+      </nav>
+    </div>
+  </header>
+  <main class="container-about">
     <article class="card" aria-labelledby="page-title">
       <header class="header">
-        <img class="avatar" src="https://via.placeholder.com/200" alt="Ảnh hồ sơ của Bạn">
+        <img class="avatar" src="assets/images/TamAnClub_logo.png" alt="Ảnh hồ sơ của Bạn">
         <div>
-          <h1 id="page-title">Tên của Bạn</h1>
-          <p class="lead">Nhà phát triển web • Thiết kế UX • Người thích giải quyết vấn đề</p>
+          <h1 id="page-title">TamAnClub — Câu lạc bộ Lập trình Tâm An</h1>
+          <p class="lead">Chuyển ngữ tài liệu Tiếng Anh • Đồ họa 3D • Game Engine Development</p>
           <div class="meta">
-            <span><strong>Địa điểm:</strong> Hà Nội, ViệtNam</span>
-            <span><strong>Email:</strong> <a href="mailto:you@example.com">you@example.com</a></span>
-            <span><a href="https://github.com/yourusername" target="_blank" rel="noopener">GitHub</a></span>
-            <span><a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener">LinkedIn</a></span>
+            <span><strong>Email:</strong> <a href="mailto:taman.programming.club@gmail.com">taman.programming.club@gmail.com</a></span>
+            <span><a href="https://github.com/oyo39" target="_blank" rel="noopener">GitHub</a></span>
           </div>
         </div>
       </header>
 
       <section class="section" aria-labelledby="about-heading">
-        <h2 id="about-heading">Về tôi</h2>
-        <p>Tôi là nhà phát triển web với hơn 5 năm kinh nghiệm xây dựng ứng dụng front-end và back-end. Tôi tập trung vào hiệu suất, trải nghiệm người dùng và mã dễ bảo trì. Tôi thích học công nghệ mới và cộng tác trong các dự án mở.</p>
+        <h2 id="about-heading">Về Câu lạc bộ</h2>
+        <p>TamAnClub được thành lập từ tháng 6/2025 với mong muốn trở thành một nơi để:
+          <br>- Các em nhỏ yêu thích lĩnh vực lập trình nhận được những hướng dẫn phù hợp, coi TamAnClub là một sân chơi sáng tạo - vừa học, vừa chơi.
+          <br>- Các lập trình viên có thể chia sẻ, trao đổi kinh nghiệm, phát triển những kỹ năng lập trình vừa hay, vừa hữu ích.<br>
+        <b>PHƯƠNG CHÂM</b>
+          <br>Lập trình là thế giới, nơi chúng ta hình thành thói quen sống trước khi có được thói quen suy nghĩ.
+          <br>Trong thế giới lập trình, chúng ta tìm ra những công cụ để sáng tạo thế giới của riêng mình và chia sẻ nó với mọi người.
+          <br>Lập trình, trước tiên là viết mã.
+        </p>
       </section>
 
       <section class="section" aria-labelledby="skills-heading">
-        <h2 id="skills-heading">Kỹ năng</h2>
+        <h2 id="skills-heading">Công cụ</h2>
         <div class="skills">
-          <span class="skill">HTML</span>
-          <span class="skill">CSS</span>
-          <span class="skill">JavaScript</span>
-          <span class="skill">React</span>
-          <span class="skill">Node.js</span>
-          <span class="skill">TypeScript</span>
+          <span class="skill">Python</span>
+          <span class="skill">Blender</span>
+          <span class="skill">C</span>
+          <span class="skill">C++</span>
+          <span class="skill">Lua</span>
         </div>
       </section>
 
       <section class="section" aria-labelledby="projects-heading">
-        <h2 id="projects-heading">Một vài dự án</h2>
+        <h2 id="projects-heading">Dự án</h2>
         <ul>
-          <li><strong>Project A:</strong> Ứng dụng quản lý công việc — React, Node.js, PostgreSQL</li>
-          <li><strong>Project B:</strong> Trang thương mại điện tử nhỏ — Next.js, Stripe</li>
-          <li><strong>Project C:</strong> Thư viện UI nội bộ — TypeScript, Storybook</li>
+          <li><strong>Project 1:</strong> 1000 tài liệu chuyển ngữ lĩnh vực Lập trình máy tính dành cho người Việt</li>
+          <li><strong>Project 2:</strong> Phát triển một 3D Game Engine</li>
         </ul>
       </section>
 
       <section class="section" aria-labelledby="contact-heading">
         <h2 id="contact-heading">Liên hệ</h2>
-        <p>Nếu bạn muốn hợp tác hoặc hỏi về dự án, gửi email cho tôi tại <a href="mailto:you@example.com">you@example.com</a> hoặc kết nối qua LinkedIn.</p>
+        <p>Nếu bạn muốn hợp tác hoặc hỏi về dự án, gửi email cho Câu lạc bộ tại <a href="mailto:taman.programming.club@gmail.com">taman.programming.club@gmail.com</a></p>
       </section>
 
       <footer>
-        <p>© <span id="year"></span> Tên của Bạn — Thiết kế tối giản</p>
+        <p>© <span id="year"></span> TamAnClub — Website này là một đóng góp vào <b>Dự án 1000 tài liệu chuyển ngữ lĩnh vực Lập trình máy tính dành cho người Việt</b> của Câu lạc bộ Lập trình Tâm An.</p>
       </footer>
     </article>
   </main>
