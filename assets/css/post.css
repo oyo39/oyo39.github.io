@@ -1,0 +1,239 @@
+.post-hero {
+  background: #0f172a;
+  color: #fff;
+  padding: 28px;
+  border-radius: 12px;
+  margin-bottom: 18px
+}
+
+.post-hero h1 {
+  margin: 0 0 8px 0;
+  font-size: 32px
+}
+
+.post-meta {
+  color: rgba(255, 255, 255, 0.85);
+  margin-top: 6px
+}
+
+.lead {
+  font-size: 18px;
+  color: var(--muted);
+  margin-top: 8px
+}
+
+.toc {
+  background: #fff;
+  padding: 14px;
+  border-radius: 10px;
+  margin-bottom: 18px
+}
+
+.post-content {
+  background: var(--card);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 1px 0 rgba(16, 24, 40, 0.03)
+}
+
+.download-box {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  background: #fff;
+  padding: 14px;
+  border-radius: 10px;
+  margin: 18px 0;
+  box-shadow: 0 1px 0 rgba(16, 24, 40, 0.03)
+}
+
+.download-btn {
+  background: var(--accent);
+  color: #fff;
+  padding: 10px 14px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 700
+}
+
+.secondary-btn {
+  background: #eef2ff;
+  color: var(--accent);
+  padding: 8px 12px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600
+}
+
+pre {
+  overflow: auto;
+  border-radius: 8px
+}
+
+.demo {
+  background: #fff;
+  padding: 12px;
+  border-radius: 8px;
+  margin: 12px 0;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap
+}
+
+.demo .box {
+  width: 100px;
+  height: 80px;
+  background: linear-gradient(135deg, #7dd3fc, #60a5fa);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #04263b;
+  font-weight: 700;
+  border-radius: 6px
+}
+
+/* Post Comments */
+.post-comments {
+  background: var(--card);
+  padding: 0 20px;
+  border-radius: 12px;
+  box-shadow: 0 1px 0 rgba(16, 24, 40, 0.03);
+}
+
+.comment-list {
+  padding: 0;
+  line-height: 1.5;
+  list-style: none;
+  margin-top: 15px;
+}
+
+.comment {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.comment__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 16px 10px;
+  border-bottom: 1px solid var(--line);
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+
+.avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  flex: 0 0 auto;
+}
+
+.author__meta {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+  min-width: 0;
+}
+
+.author__name {
+  font-weight: 650;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.author__time {
+  color: var(--muted);
+  /* font-size: 21px; */
+  margin-top: 4px;
+}
+
+.comment__body {
+  padding: 12px 16px 14px;
+}
+
+.comment__text {
+  margin: 0;
+  line-height: 1.55;
+  white-space: pre-wrap;
+}
+
+/* Danh sách phản hồi (con) */
+.replies {
+  border-top: 1px solid var(--line);
+  padding: 12px 12px 14px 33px;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, .02), rgba(255, 255, 255, .01));
+}
+
+.replies__title {
+  color: var(--muted);
+  /* font-size: 21px; */
+  margin: 0 8px 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.replies__title::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 0 4px rgba(106, 166, 255, .18);
+}
+
+.reply {
+  position: relative;
+  background: var(--reply-bg);
+  border: 1px solid rgba(106, 166, 255, .18);
+  border-radius: 12px;
+  padding: 12px 12px;
+  margin: 8px;
+}
+
+/* Vẽ đường gợi ý liên kết (tùy chọn) */
+.reply::before {
+  content: "";
+  position: absolute;
+  left: -10px;
+  top: 18px;
+  width: 10px;
+  height: 1px;
+  background: rgba(106, 166, 255, .35);
+}
+
+.reply__meta {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin-bottom: 6px;
+}
+
+.reply__name {
+  font-weight: 650;
+  /* font-size: 24px; */
+}
+
+.reply__time {
+  color: var(--muted);
+  /* font-size: 21px; */
+}
+
+.reply__text {
+  margin: 0;
+  /* color: #dbe6ff; */
+  line-height: 1.5;
+  /* font-size: 26px; */
+  white-space: pre-wrap;
+}
